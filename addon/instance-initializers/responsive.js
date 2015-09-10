@@ -1,7 +1,7 @@
 import Ember from 'ember';
 export function initialize(instance) {
-  var media = instance.container.lookupFactory('responsive:media');
-  var breakpoints = instance.container.lookupFactory('breakpoints:main');
+  var media = instance._lookupFactory('responsive:media');
+  var breakpoints = instance._lookupFactory('breakpoints:main');
   if (breakpoints) {
     for (var name in breakpoints) {
       if (breakpoints.hasOwnProperty(name)) {
